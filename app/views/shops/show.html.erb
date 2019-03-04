@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @shop.category.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shop.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @shop.address %>
+  <%= content_tag(:iframe, 'map', src:'https://www.google.com/maps/embed/v1/place?key=AIzaSyCGnn3Cc1N4X8opf5QKTybw1xk0fy-zn4c=' + @shop.address, width: 800, height: 400, frameborder: 0) %>
+
+<br>
+</p>
+
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %>
